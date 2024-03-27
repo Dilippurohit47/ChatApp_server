@@ -10,7 +10,7 @@ const mongoUri = process.env.MONGO_URI;
 connectDb(mongoUri);
 
 const app = express();
-app.use(express.json());w
+app.use(express.json());
 
 app.use(morgan("dev"));
 app.use("/user", userRoute);
