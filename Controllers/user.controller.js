@@ -55,4 +55,20 @@ const logOut = TryCatch(async (req, res) => {
 
 })  
 
-export { newUser, login, getMyProfile ,logOut};
+// ../search?name=dilip ..query 
+const searchUser = TryCatch(async (req, res) => {
+  const {name} = req.query
+
+
+
+  res.status(200).json({ 
+    success:true,
+    name
+  })
+
+})  
+
+
+
+
+export { newUser, login, getMyProfile ,logOut,searchUser};
