@@ -26,11 +26,10 @@ const connectDb = (uri) => {
 const sendToken = (res, user, code, message) => {
   const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
 
-  console.log(token);
   return res.status(code).cookie("chat-token", token, cookieOption).json({
     success: true,
     message,
   });
 };
 
-export { connectDb, sendToken };
+export { connectDb, sendToken,cookieOption };
