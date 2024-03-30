@@ -8,7 +8,7 @@ const createdUser = async (numUsers) => {
       const tempUser = User.create({
         name: faker.person.fullName(),
         username: faker.internet.userName(),
-        bio: faker.lorem.sentence(),
+        bio: faker.lorem.sentence(10),
         password: "password",
         avatar: {
           url: faker.image.avatar(),
